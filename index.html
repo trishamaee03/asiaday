@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#344c3a">
+  <title>A Little Birthday Scrapbook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="site">
 
+  <!-- PAGE 1: BIRTHDAY CALENDAR -->
+  <section class="screen active" id="calendar-screen">
+    <div class="wrap">
+      <div class="opening-title">
+        <div class="eyebrow">a page from our little scrapbook ✿</div>
+        <h1 class="display">Happy Birthday!</h1>
+        <p class="scribble">A little day worth celebrating.</p>
+      </div>
+
+      <div class="calendar-layout">
+        <div class="calendar-sheet paper gingham">
+          <div class="tape"></div>
+          <header class="calendar-head">
+            <span class="month-label">A date worth celebrating</span>
+            <h2 class="display">October <span style="color:var(--olive)">2026</span></h2>
+            <p class="scribble">little moments, big memories</p>
+          </header>
+          <div class="calendar-grid" id="calendar-grid"></div>
+          <p class="birthday-tag">✿ October 17 — her special day! ✿</p>
+          <span class="sticker" style="right:12px;bottom:22px">✦</span>
+        </div>
+
+        <aside class="side-scrap">
+          <span class="sticker" style="top:0;right:12%">🌼</span>
+          <figure class="polaroid">
+            <img src="baby-photo.jpg" alt="Baby photo" data-fallback="baby">
+            <figcaption class="scribble">our birthday girl ♡</figcaption>
+            <span class="tape"></span>
+          </figure>
+          <p class="side-note scribble">finally, a day all about you! ✿</p>
+          <span class="sticker" style="bottom:4px;left:10%">✧</span>
+        </aside>
+      </div>
+
+      <div class="opening-actions">
+        <button class="btn" data-go="wish-screen">
+          Open your little surprise →
+        </button>
+        <p class="tiny-note scribble">made with a little love & lots of memories</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: MAKE A WISH -->
+  <section class="screen" id="wish-screen">
+    <div class="wrap">
+      <div class="wish-panel paper gingham">
+        <span class="sticker" style="top:35px;left:7%">✦</span>
+        <span class="sticker" style="top:90px;right:8%">🌼</span>
+        <div class="eyebrow">one tiny birthday ritual</div>
+        <h2 class="scribble">Before we continue, make a wish.</h2>
+        <p class="subtitle">Close your eyes for a second. Pick a lovely thought.</p>
+
+        <div class="cake-stage">
+          <svg class="cake-svg" viewBox="0 0 360 310" role="img" aria-labelledby="cake-title cake-desc">
+            <title id="cake-title">Hand-drawn birthday cake</title>
+            <desc id="cake-desc">A cream birthday cake with sage frosting and three lit candles. Click the flames to make a wish.</desc>
+            <ellipse cx="180" cy="275" rx="125" ry="15" fill="#344c3a" opacity=".1"/>
+            <path d="M72 174 Q180 150 288 174 L278 244 Q180 268 82 244Z" fill="#fffdf5" stroke="#899b70" stroke-width="3"/>
+            <path d="M72 174 Q89 192 106 174 T140 174 T174 174 T208 174 T242 174 T276 174 T288 174 L284 197 Q266 212 249 197 T214 197 T179 197 T144 197 T109 197 T76 197Z" fill="#b9cbaa" stroke="#899b70" stroke-width="2"/>
+            <path d="M82 225 Q96 213 110 225 T138 225 T166 225 T194 225 T222 225 T250 225 T280 225" fill="none" stroke="#dce6d1" stroke-width="6" stroke-linecap="round"/>
+            <path d="M62 245 Q180 265 298 245 L298 258 Q180 285 62 258Z" fill="#dce6d1" stroke="#899b70" stroke-width="3"/>
+            <path d="M94 160 Q180 143 266 160 L258 180 Q180 197 102 180Z" fill="#fffdf5" stroke="#899b70" stroke-width="3"/>
+            <path d="M94 160 Q111 174 128 160 T162 160 T196 160 T230 160 T266 160" fill="none" stroke="#899b70" stroke-width="3"/>
+
+            <g stroke="#899b70" stroke-width="2">
+              <path d="M139 151V106 Q139 101 144 101H151V151Z" fill="#e8dca9"/>
+              <path d="M176 148V91 Q176 86 181 86H188V148Z" fill="#dce6d1"/>
+              <path d="M213 151V106 Q213 101 218 101H225V151Z" fill="#e8dca9"/>
+            </g>
+
+            <g id="candle-hit" class="candle-hit" role="button" tabindex="0" aria-label="Blow out the birthday candles">
+              <g class="flame" id="flame1">
+                <path d="M145 100 Q125 81 145 58 Q162 80 145 100Z" fill="#e8b95e" stroke="#c59b4b" stroke-width="2"/>
+                <path d="M145 94 Q137 81 146 70 Q153 82 145 94Z" fill="#fff5bf"/>
+              </g>
+              <g class="flame" id="flame2">
+                <path d="M182 85 Q162 66 182 43 Q199 65 182 85Z" fill="#e8b95e" stroke="#c59b4b" stroke-width="2"/>
+                <path d="M182 79 Q174 66 183 55 Q190 67 182 79Z" fill="#fff5bf"/>
+              </g>
+              <g class="flame" id="flame3">
+                <path d="M219 100 Q199 81 219 58 Q236 80 219 100Z" fill="#e8b95e" stroke="#c59b4b" stroke-width="2"/>
+                <path d="M219 94 Q211 81 220 70 Q227 82 219 94Z" fill="#fff5bf"/>
+              </g>
+            </g>
+
+            <g id="smoke" class="smoke" fill="none" stroke="#8b9b83" stroke-width="3" stroke-linecap="round">
+              <path d="M145 95 Q131 81 147 68 Q158 57 147 45"/>
+              <path d="M182 80 Q196 66 180 54 Q168 44 183 30"/>
+              <path d="M219 95 Q231 82 217 69 Q208 59 221 47"/>
+            </g>
+            <g fill="#899b70">
+              <path d="M48 133l4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/>
+              <path d="M302 114l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/>
+            </g>
+            <g fill="#b9cbaa" stroke="#899b70" stroke-width="1.5">
+              <circle cx="53" cy="201" r="6"/>
+              <circle cx="307" cy="186" r="5"/>
+              <path d="M45 213q8-14 16 0q-8 14-16 0"/>
+            </g>
+          </svg>
+        </div>
+
+        <p id="wish-hint" class="wish-hint">
+          <strong>Click the candle</strong> to make your wish come true ✨
+        </p>
+        <button class="btn secondary" id="blow-button">I made a wish ✿</button>
+        <div style="margin-top:26px">
+          <button class="mini-back" data-go="calendar-screen">← Back to the calendar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3: BIRTHDAY REVEAL -->
+  <section class="screen" id="reveal-screen">
+    <div class="wrap">
+      <div class="reveal-panel paper">
+        <span class="sticker" style="top:22px;left:7%">✿</span>
+        <span class="sticker" style="top:27px;right:8%">✦</span>
+        <div class="eyebrow">today is your little universe</div>
+        <h1 class="reveal-title display">
+          HAPPY BIRTHDAY, <span data-text="name">[NAME]</span>!
+        </h1>
+        <div class="age-display display" id="age-display" aria-label="Birthday age"></div>
+
+        <div class="reveal-collage">
+          <figure class="mini-polaroid">
+            <img src="birthday-photo-2.jpg" alt="Optional birthday photo two" data-fallback="birthday2">
+            <figcaption>little sunshine</figcaption>
+          </figure>
+          <figure class="mini-polaroid">
+            <img src="birthday-photo-1.jpg" alt="Main birthday photo" data-fallback="birthday1">
+            <figcaption>the birthday star ♡</figcaption>
+          </figure>
+          <figure class="mini-polaroid">
+            <img src="birthday-photo-3.jpg" alt="Optional birthday photo three" data-fallback="birthday3">
+            <figcaption>forever iconic</figcaption>
+          </figure>
+        </div>
+
+        <p class="birthday-message" id="reveal-message"></p>
+        <button class="btn" data-go="menu-screen">There's more for you →</button>
+        <span class="sticker" style="bottom:25px;right:10%">♫</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: EXACTLY FOUR MENU CARDS -->
+  <section class="screen" id="menu-screen">
+    <div class="wrap">
+      <div class="section-top">
+        <div class="eyebrow">the next few pages are all yours</div>
+        <h2 class="display">A few little things, just for you.</h2>
+        <p class="subtitle scribble">Take your time. There's something waiting in every page.</p>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" data-go="memories-screen">
+          <span class="card-icon">📷</span>
+          <h3>Memories</h3>
+          <p>Little snapshots of moments worth keeping.</p>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="menu-card" data-go="greetings-screen">
+          <span class="card-icon">💌</span>
+          <h3>Birthday Greetings</h3>
+          <p>A few words from my heart to yours.</p>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="menu-card" data-go="letter-screen">
+          <span class="card-icon">✉️</span>
+          <h3>Surprise Letter</h3>
+          <p>A little letter, waiting just for you.</p>
+          <span class="card-arrow">↗</span>
+        </button>
+        <button class="menu-card" data-go="about-screen">
+          <span class="card-icon">🌼</span>
+          <h3>A Little About You</h3>
+          <p>All the little things that make you, you.</p>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+      <p class="footer-note scribble">kept with love, tucked between these pages ✿</p>
+    </div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="screen inner-screen" id="memories-screen">
+    <div class="topline wrap">
+      <span class="brand">✿ our scrapbook</span>
+      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
+    </div>
+    <div class="inner-paper paper">
+      <div class="inner-heading">
+        <div class="eyebrow">little moments, forever kept</div>
+        <h2 class="display">Memories</h2>
+        <p class="scribble">Some days become stories we tell forever.</p>
+      </div>
+      <div class="memory-grid" id="memory-grid"></div>
+      <p class="tiny-note center scribble" style="margin-top:25px">more little moments live in our hearts ♡</p>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY GREETINGS -->
+  <section class="screen inner-screen" id="greetings-screen">
+    <div class="topline wrap">
+      <span class="brand">✿ our scrapbook</span>
+      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
+    </div>
+    <div class="inner-paper paper gingham">
+      <div class="letter-card">
+        <div class="inner-heading">
+          <div class="eyebrow">folded with love</div>
+          <h2 class="scribble">A little message for you.</h2>
+        </div>
+        <div class="letter-copy" id="greeting-copy"></div>
+        <p class="scribble" style="text-align:right;margin:20px 0 0;position:relative">with all my love, ♡</p>
+        <span class="sticker" style="bottom:14px;left:12px">🌼</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SURPRISE LETTER: ONE LETTER, NO EXTRA GIFT MENU -->
+  <section class="screen inner-screen" id="letter-screen">
+    <div class="topline wrap">
+      <span class="brand">✿ our scrapbook</span>
+      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
+    </div>
+    <div class="inner-paper paper">
+      <div class="inner-heading">
+        <div class="eyebrow">sealed just for you</div>
+        <h2 class="display">Surprise Letter</h2>
+        <p class="scribble">A small note with a big amount of love.</p>
+      </div>
+      <div class="envelope-wrap">
+        <button class="envelope" id="envelope-button" aria-label="Open the surprise letter" aria-expanded="false">
+          <span class="env-back"></span>
+          <span class="env-flap"></span>
+          <span class="env-front"></span>
+          <span class="heart-seal">♥</span>
+        </button>
+        <p class="scribble" id="envelope-caption">Open when you're ready.</p>
+      </div>
+      <article class="letter-card hidden-letter" id="surprise-letter" aria-live="polite">
+        <div class="letter-copy hand" id="surprise-letter-copy"></div>
+      </article>
+      <div class="center">
+        <button class="btn secondary" id="letter-toggle">Open my letter ♡</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- A LITTLE ABOUT YOU -->
+  <section class="screen inner-screen" id="about-screen">
+    <div class="topline wrap">
+      <span class="brand">✿ our scrapbook</span>
+      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
+    </div>
+    <div class="inner-paper paper gingham">
+      <div class="inner-heading">
+        <div class="eyebrow">a page full of your kind of magic</div>
+        <h2 class="display">Things that make you, you.</h2>
+        <p class="scribble">A little collection of your very own kind of wonderful.</p>
+      </div>
+      <div class="personality-grid" id="personality-grid"></div>
+    </div>
+  </section>
+
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+</main>
+
+<script src="script.js" defer></script>
+</body>
+        </html>
