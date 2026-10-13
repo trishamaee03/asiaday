@@ -66,10 +66,10 @@
         <div class="cake-stage">
           <svg class="cake-svg" viewBox="0 0 360 310" role="img" aria-labelledby="cake-title cake-desc">
             <title id="cake-title">Hand-drawn birthday cake</title>
-            <desc id="cake-desc">A cream birthday cake with sage frosting and three lit candles. Click the flames to make a wish.</desc>
+            <desc id="cake-desc">A cream birthday cake with sage frosting and three lit candles. Tap the flames to continue.</desc>
             <ellipse cx="180" cy="275" rx="125" ry="15" fill="#344c3a" opacity=".1"/>
             <path d="M72 174 Q180 150 288 174 L278 244 Q180 268 82 244Z" fill="#fffdf5" stroke="#899b70" stroke-width="3"/>
-            <path d="M72 174 Q89 192 106 174 T140 174 T174 174 T208 174 T242 174 T276 174 T288 174 L284 197 Q266 212 249 197 T214 197 T179 197 T144 197 T109 197 T76 197Z" fill="#b9cbaa" stroke="#899b70" stroke-width="2"/>
+            <path d="M72 174 Q89 192 106 174 T140 174 T174 174 T208 174 T242 174 T276 174 T288 174 L284 197 Q266 212 249 197 T214 197 T179 197 T144 197 T109 197 T76 197Z" fill="#b9cbaa" stroke="#899b70" stroke-width="3"/>
             <path d="M82 225 Q96 213 110 225 T138 225 T166 225 T194 225 T222 225 T250 225 T280 225" fill="none" stroke="#dce6d1" stroke-width="6" stroke-linecap="round"/>
             <path d="M62 245 Q180 265 298 245 L298 258 Q180 285 62 258Z" fill="#dce6d1" stroke="#899b70" stroke-width="3"/>
             <path d="M94 160 Q180 143 266 160 L258 180 Q180 197 102 180Z" fill="#fffdf5" stroke="#899b70" stroke-width="3"/>
@@ -81,7 +81,7 @@
               <path d="M213 151V106 Q213 101 218 101H225V151Z" fill="#e8dca9"/>
             </g>
 
-            <g id="candle-hit" class="candle-hit" role="button" tabindex="0" aria-label="Blow out the birthday candles">
+            <g id="candle-hit" class="candle-hit" role="button" tabindex="0" aria-label="Tap the birthday candles">
               <g class="flame" id="flame1">
                 <path d="M145 100 Q125 81 145 58 Q162 80 145 100Z" fill="#e8b95e" stroke="#c59b4b" stroke-width="2"/>
                 <path d="M145 94 Q137 81 146 70 Q153 82 145 94Z" fill="#fff5bf"/>
@@ -113,10 +113,6 @@
           </svg>
         </div>
 
-        <p id="wish-hint" class="wish-hint">
-          <strong>Click the candle</strong> to make your wish come true ✨
-        </p>
-        <button class="btn secondary" id="blow-button">I made a wish ✿</button>
         <div style="margin-top:26px">
           <button class="mini-back" data-go="calendar-screen">← Back to the calendar</button>
         </div>
@@ -198,90 +194,9 @@
   </section>
 
   <!-- MEMORIES -->
-  <section class="screen inner-screen" id="memories-screen">
-    <div class="topline wrap">
-      <span class="brand">✿ our scrapbook</span>
-      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
-    </div>
-    <div class="inner-paper paper">
-      <div class="inner-heading">
-        <div class="eyebrow">little moments, forever kept</div>
-        <h2 class="display">Memories</h2>
-        <p class="scribble">Some days become stories we tell forever.</p>
-      </div>
-      <div class="memory-grid" id="memory-grid"></div>
-      <p class="tiny-note center scribble" style="margin-top:25px">more little moments live in our hearts ♡</p>
-    </div>
-  </section>
+  ...
 
-  <!-- BIRTHDAY GREETINGS -->
-  <section class="screen inner-screen" id="greetings-screen">
-    <div class="topline wrap">
-      <span class="brand">✿ our scrapbook</span>
-      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
-    </div>
-    <div class="inner-paper paper gingham">
-      <div class="letter-card">
-        <div class="inner-heading">
-          <div class="eyebrow">folded with love</div>
-          <h2 class="scribble">A little message for you.</h2>
-        </div>
-        <div class="letter-copy" id="greeting-copy"></div>
-        <p class="scribble" style="text-align:right;margin:20px 0 0;position:relative">with all my love, ♡</p>
-        <span class="sticker" style="bottom:14px;left:12px">🌼</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SURPRISE LETTER: ONE LETTER, NO EXTRA GIFT MENU -->
-  <section class="screen inner-screen" id="letter-screen">
-    <div class="topline wrap">
-      <span class="brand">✿ our scrapbook</span>
-      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
-    </div>
-    <div class="inner-paper paper">
-      <div class="inner-heading">
-        <div class="eyebrow">sealed just for you</div>
-        <h2 class="display">Surprise Letter</h2>
-        <p class="scribble">A small note with a big amount of love.</p>
-      </div>
-      <div class="envelope-wrap">
-        <button class="envelope" id="envelope-button" aria-label="Open the surprise letter" aria-expanded="false">
-          <span class="env-back"></span>
-          <span class="env-flap"></span>
-          <span class="env-front"></span>
-          <span class="heart-seal">♥</span>
-        </button>
-        <p class="scribble" id="envelope-caption">Open when you're ready.</p>
-      </div>
-      <article class="letter-card hidden-letter" id="surprise-letter" aria-live="polite">
-        <div class="letter-copy hand" id="surprise-letter-copy"></div>
-      </article>
-      <div class="center">
-        <button class="btn secondary" id="letter-toggle">Open my letter ♡</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- A LITTLE ABOUT YOU -->
-  <section class="screen inner-screen" id="about-screen">
-    <div class="topline wrap">
-      <span class="brand">✿ our scrapbook</span>
-      <button class="mini-back" data-go="menu-screen">← Back to the scrapbook</button>
-    </div>
-    <div class="inner-paper paper gingham">
-      <div class="inner-heading">
-        <div class="eyebrow">a page full of your kind of magic</div>
-        <h2 class="display">Things that make you, you.</h2>
-        <p class="scribble">A little collection of your very own kind of wonderful.</p>
-      </div>
-      <div class="personality-grid" id="personality-grid"></div>
-    </div>
-  </section>
-
-  <div class="confetti" id="confetti" aria-hidden="true"></div>
+<script src="script.js"></script>
 </main>
-
-<script src="script.js" defer></script>
 </body>
-        </html>
+</html>
