@@ -1,3 +1,4 @@
+/* Updated stylesheet — includes screen transition and improved flame styles */
 :root {
   --bg: #f5f7ee;
   --sage: #dce6d1;
@@ -96,19 +97,31 @@ button:disabled {
   pointer-events: none;
 }
 
+/* Make the site a positioning context so .screen can be stacked */
 .site {
   min-height: 100vh;
+  position: relative;
 }
 
+/* Full-screen sections (screens) — use opacity + transform transitions for smooth page changes */
 .screen {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: block;
   min-height: 100vh;
   padding: clamp(18px, 4vw, 48px) 16px 38px;
-  animation: pageIn 0.5s ease both;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  pointer-events: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .screen.active {
-  display: block;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
 }
 
 @keyframes pageIn {
@@ -373,17 +386,18 @@ h3 {
   outline: none;
 }
 
+/* Flame appearance and the 'off' state */
 .flame {
   transform-origin: center bottom;
   animation: flameFlicker 1.2s infinite ease-in-out;
-  transition: opacity 0.38s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.38s cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition: opacity 0.38s ease, transform 0.38s ease;
   filter: drop-shadow(0 6px 10px rgba(236, 189, 84, 0.35));
   opacity: 1;
 }
 
 .flame.off {
   opacity: 0;
-  transform: translateY(8px) scale(0.6) rotate(-2deg);
+  transform: translateY(8px) scale(0.75) rotate(-2deg);
 }
 
 @keyframes flameFlicker {
