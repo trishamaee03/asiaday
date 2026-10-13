@@ -548,17 +548,23 @@ h3 {
    PAGE 2 — WISH AND CAKE
    ========================================= */
 #wish-screen {
-  background: linear-gradient(180deg, #e5edd9 0%, #dfe8d8 100%);
+  background:
+    linear-gradient(180deg, rgba(237, 242, 229, 0.95), rgba(228, 236, 220, 0.95)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(130, 156, 108, 0.06) 0 14px,
+      rgba(255,255,255,0.06) 14px 28px
+    );
 }
 
 .wish-panel {
-  max-width: 760px;
-  margin: 10px auto 0;
-  padding: clamp(26px, 5vw, 44px) 26px 30px;
-  border-radius: 22px;
-  background: rgba(255, 253, 245, 0.82);
-  border: 2px solid rgba(52, 76, 58, 0.28);
-  box-shadow: 0 14px 24px rgba(52, 76, 58, 0.08);
+  max-width: 720px;
+  margin: 12px auto 0;
+  padding: clamp(24px, 4vw, 38px) 26px 24px;
+  border-radius: 20px;
+  background: rgba(255, 253, 246, 0.7);
+  border: 1px solid rgba(91, 124, 92, 0.18);
+  box-shadow: 0 12px 18px rgba(52, 76, 58, 0.06);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -567,16 +573,16 @@ h3 {
 .wish-panel::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 2px dashed rgba(120, 138, 117, 0.3);
+  inset: 10px;
+  border: 1px dashed rgba(120, 138, 117, 0.24);
   border-radius: 16px;
   pointer-events: none;
 }
 
 .wish-panel h2 {
   font-family: "Segoe Print", "Bradley Hand", cursive;
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1.05;
+  font-size: clamp(2.1rem, 4.5vw, 3.7rem);
+  line-height: 1.06;
   color: #2d4839;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -585,13 +591,13 @@ h3 {
 
 .wish-panel .subtitle {
   font-family: "Segoe Print", "Bradley Hand", cursive;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  color: #48614a;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  color: #47634a;
 }
 
 .cake-stage {
-  width: min(520px, 92%);
-  margin: 18px auto 8px;
+  width: min(470px, 88%);
+  margin: 20px auto 6px;
   position: relative;
   filter: none;
 }
@@ -613,21 +619,21 @@ h3 {
 }
 
 .cake-svg .cake-base {
-  fill: #f6f6ef;
+  fill: #f5f5ee;
 }
 
 .cake-svg .cake-mid {
-  fill: #dfead8;
+  fill: #e3eadb;
 }
 
 .cake-svg .cake-top {
-  fill: #f0f4ea;
+  fill: #f2f5ee;
 }
 
 .cake-svg .icing {
   fill: none;
   stroke: #4b6c57;
-  stroke-width: 3.5;
+  stroke-width: 3.4;
   stroke-linecap: round;
 }
 
@@ -693,8 +699,8 @@ h3 {
 
 .wish-hint {
   font-family: "Segoe Print", "Bradley Hand", cursive;
-  font-size: clamp(1.2rem, 2vw, 1.75rem);
-  color: #435f4b;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  color: #445f4a;
   margin-top: 18px;
   margin-bottom: 14px;
 }
@@ -705,7 +711,7 @@ h3 {
 
 .wish-panel .sticker {
   opacity: .8;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 /* =========================================
