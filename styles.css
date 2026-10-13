@@ -74,6 +74,11 @@ button:disabled {
   background-size: var(--check-size) var(--check-size);
 }
 
+.dots {
+  background-image: radial-gradient(#899b7040 1px, transparent 1px);
+  background-size: 13px 13px;
+}
+
 .paper {
   position: relative;
   background: var(--cream);
@@ -130,7 +135,10 @@ button:disabled {
   color: var(--olive);
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-top: 0;
 }
 
@@ -518,5 +526,3 @@ h3 {
     transition: none !important;
   }
 }
-
-"}]}              
