@@ -513,16 +513,29 @@ h3 {
 
 .flame {
   transform-origin: center bottom;
-  animation: flicker .65s infinite alternate ease-in-out;
+  animation: steadyGlow 1.8s ease-in-out infinite alternate;
 }
 
 .flame.off {
   display: none;
 }
 
-@keyframes flicker {
-  from { transform: rotate(-5deg) scale(.94); }
-  to { transform: rotate(5deg) scale(1.06); }
+@keyframes steadyGlow {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.94;
+    filter: drop-shadow(0 0 2px rgba(232, 185, 94, 0.4));
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(232, 185, 94, 0.8));
+  }
+  100% {
+    transform: scale(1.04);
+    opacity: 0.97;
+    filter: drop-shadow(0 0 8px rgba(232, 185, 94, 0.9));
+  }
 }
 
 .smoke {
@@ -998,165 +1011,3 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
-  .polaroid {
-    width: min(190px, 95%);
-    margin: 10px auto;
-  }
-
-  .polaroid img {
-    height: 165px;
-  }
-
-  .side-note {
-    font-size: 1rem;
-  }
-
-  .calendar-sheet {
-    padding: 22px 12px 15px;
-  }
-
-  .day {
-    min-height: 43px;
-  }
-
-  .weekday {
-    font-size: .59rem;
-  }
-
-  .menu-grid {
-    gap: 13px;
-  }
-
-  .menu-card {
-    padding: 17px;
-    min-height: 175px;
-  }
-
-  .menu-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .reveal-collage {
-    gap: 6px;
-  }
-
-  .mini-polaroid {
-    padding: 5px 5px 25px;
-  }
-
-  .mini-polaroid img {
-    height: 100px;
-  }
-
-  .memory-photo img {
-    height: 145px;
-  }
-
-  .memory-grid {
-    gap: 14px;
-  }
-
-  .personality-grid {
-    gap: 10px;
-  }
-
-  .personality-note {
-    padding: 13px;
-  }
-
-  .topline {
-    align-items: flex-start;
-  }
-
-  .brand {
-    font-size: .68rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .screen {
-    padding: 16px 10px 28px;
-  }
-
-  .calendar-layout {
-    gap: 12px;
-  }
-
-  .side-scrap {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .polaroid img {
-    height: 140px;
-  }
-
-  .day {
-    min-height: 37px;
-    font-size: .78rem;
-  }
-
-  .weekday {
-    font-size: .52rem;
-    letter-spacing: -.02em;
-  }
-
-  .calendar-sheet {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-card {
-    min-height: 140px;
-  }
-
-  .menu-card .card-icon {
-    font-size: 1.8rem;
-    margin-bottom: 3px;
-  }
-
-  .menu-card p {
-    max-width: 85%;
-  }
-
-  .memory-photo img {
-    height: 120px;
-  }
-
-  .memory-photo {
-    padding: 6px 6px 30px;
-  }
-
-  .memory-photo figcaption {
-    font-size: .78rem;
-  }
-
-  .personality-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .reveal-collage {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .mini-polaroid:nth-child(3) {
-    display: none;
-  }
-
-  .age-display {
-    font-size: 6rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *:before, *:after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
-  }
-}
